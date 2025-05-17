@@ -1,0 +1,74 @@
+# My Flask To-Do List App
+
+#### Video Demo: <Yhttps://youtu.be/D1DhgU1_aXA>
+
+---
+
+## About This Project
+
+This is a simple web app I built to help keep track of tasks — basically, a to-do list. It lets you add new tasks, mark them as done, and delete them when you’re finished. I wanted to create something practical but also learn how to combine a backend with a frontend, so I used Python with Flask for the server and SQLite as a lightweight database.
+
+The goal was to get hands-on experience with full-stack development and understand how data flows between the server, the database, and the user’s browser. Plus, it’s pretty satisfying to build something useful and see it work in real time!
+
+---
+
+## How It Works
+
+When you open the app, you see your current list of tasks. You can type a new task in the input box and click “Add” — this saves the task in the database. Tasks that aren’t done yet have a button to mark them completed, and you can also delete any task you no longer need.
+
+The app even shows a progress percentage, so you get a quick visual of how many tasks you’ve finished compared to the total.
+
+On the front end, HTML and CSS handle the layout and styles, while JavaScript is used to make interactions smooth — like marking tasks done or deleting them — without needing to reload the whole page.
+
+---
+
+## What’s in Each File
+
+- **app.py**  
+  This is the heart of the app. It uses Flask to create the web server and define routes that control what happens when you visit pages or submit forms. It also connects to the SQLite database to store and retrieve your tasks.
+
+- **templates/index.html**  
+  This file is the main page you see in your browser. It uses Flask’s template system to display your list of tasks dynamically, adding special styles depending on whether a task is done or not.
+
+- **static/style.css**  
+  The CSS file that makes the app look clean and easy to use. It controls colors, fonts, spacing, and how buttons and tasks appear.
+
+- **static/script.js**  
+  JavaScript code here listens for your clicks on “complete” or “delete” buttons and sends those actions to the server without refreshing the page, so the experience feels quick and seamless.
+
+- **init_db.py** (optional)  
+  A simple script you can run once to create the database and the tasks table, so your app has a place to save your data.
+
+- **todo.db**  
+  This is the database file where all your tasks live. It’s created automatically if you run the initialization script.
+
+---
+
+## Why I Made Certain Choices
+
+I chose Flask because it’s lightweight and easy to use, which is perfect for learning and small projects like this. SQLite fits well because it doesn’t require a separate server and keeps everything simple.
+
+Separating the static files and templates keeps the project organized and follows standard Flask practices, which will help if I decide to add more features later.
+
+Using JavaScript to handle task updates without refreshing the page makes the app feel faster and more modern, which improves user experience.
+
+---
+
+## What Could Be Improved
+
+There’s definitely room to grow this project! Here are some ideas I’d like to explore in the future:
+
+- Adding user accounts so different people can keep their own to-do lists.
+- Allowing tasks to have categories or deadlines.
+- Using a more powerful database if this grows bigger.
+- Improving the design with frameworks like Bootstrap to make it look more polished.
+- Writing automated tests to make sure everything keeps working as I add features.
+
+---
+
+## Final Thoughts
+
+Building this to-do app was a great way for me to practice full-stack development and understand how the different parts of a web app connect. I’m proud of how it came together — simple, functional, and a nice base to build on.
+
+Thanks for checking it out!
+
